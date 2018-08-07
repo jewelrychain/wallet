@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Preference
+        android:icon="@drawable/ic_wallet"
+        android:key="pref_wallet"
+        android:title="@string/action_wallets" />
+
+    <Preference
+        android:icon="@drawable/ic_pwd"
+        android:key="pref_change_password"
+        android:title="@string/change_password" />
+
+    <ListPreference
+        android:dialogTitle="@string/network_label"
+        android:icon="@drawable/ic_net"
+        android:key="pref_rpcServer"
+        android:title="@string/network_label" />
+
+    <PreferenceCategory
+        android:key="pref_opensource_links"
+        android:title="@string/title_opensource">
+
+        <Preference
+            android:icon="@drawable/ic_source"
+            android:title="@string/title_source_code">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/snailflying/ETHWallet" />
+        </Preference>
+
+        <Preference
+            android:icon="@drawable/ic_bug"
+            android:title="@string/title_report_bug">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/snailflying/ETHWallet/issues/new" />
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="pref_community_links"
+        android:title="@string/title_community">
+
+        <Preference
+            android:icon="@drawable/ic_qq"
+            android:key="pref_qq"
+            android:shouldDisableView="true"
+            android:title="@string/qq">
+
+        </Preference>
+
+        <Preference
+            android:icon="@mipmap/settings_telegram"
+            android:shouldDisableView="true"
+            android:title="@string/telegram">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/joinchat/JGIbYUire6vlXAidADHfOQ" />
+        </Preference>
+
+        <Preference
+        android:icon="@mipmap/settings_telegram"
+        android:key="pref_telegram_red_packet"
+        android:shouldDisableView="true"
+        android:title="@string/telegram_red_packet"/>
+
+        <!--<Preference-->
+        <!--android:icon="@drawable/ic_facebook"-->
+        <!--android:key="pref_facebook"-->
+        <!--android:shouldDisableView="true"-->
+        <!--android:title="@string/facebook">-->
+
+        <!--</Preference>-->
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="pref_support"
+        android:title="@string/title_support">
+
+        <Preference
+            android:icon="@mipmap/settings_rating"
+            android:key="pref_rate"
+            android:title="@string/title_rate" />
+
+        <Preference
+            android:icon="@mipmap/settings_email"
+            android:key="pref_email"
+            android:title="@string/title_email" />
+
+        <Preference
+            android:icon="@mipmap/settings_donate"
+            android:key="pref_donate"
+            android:title="@string/title_donate"></Preference>
+
+        <Preference
+            android:icon="@mipmap/settings_privacy_policy"
+            android:title="@string/title_privacy_policy">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://trustwalletapp.com/privacy-policy.html" />
+        </Preference>
+
+        <Preference
+            android:icon="@mipmap/settings_terms"
+            android:title="@string/title_terms">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://trustwalletapp.com/terms.html" />
+        </Preference>
+
+        <Preference
+            android:iconSpaceReserved="true"
+            android:key="pref_version"
+            android:title="@string/title_version"></Preference>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
